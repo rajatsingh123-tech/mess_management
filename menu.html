@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu Management - Hostel Mess</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 Hostel Mess Food Menu</h1>
+            <nav>
+                <a href="feedback.html">Give Feedback</a>
+                <a href="admin.html">Admin Dashboard</a>
+                <a href="menu.html" class="active">Food Menu</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="menu-container">
+                <h2>📅 Monthly Food Menu</h2>
+                
+                <div class="menu-controls">
+                    <div class="form-group">
+                        <label for="monthSelect">Select Month:</label>
+                        <select id="monthSelect">
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="yearInput">Year:</label>
+                        <input type="number" id="yearInput" value="2024">
+                    </div>
+                    
+                    <button onclick="loadMenu()" class="submit-btn">Load Menu</button>
+                    <button onclick="enableEditing()" class="submit-btn" style="background: #27ae60;">Edit Menu</button>
+                </div>
+
+                <div id="menuDisplay">
+                    <div class="loading">Loading menu...</div>
+                </div>
+
+                <div id="editMenuForm" style="display: none;">
+                    <h3>Edit Menu Items</h3>
+                    <div id="menuEditor"></div>
+                    <button onclick="saveMenu()" class="submit-btn" style="background: #3498db;">Save Menu</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

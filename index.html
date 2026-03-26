@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Feedback - Hostel Mess</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 Hostel Mess Feedback System</h1>
+            <nav>
+                <a href="feedback.html" class="active">Give Feedback</a>
+                <a href="admin.html">Admin Dashboard</a>
+                <a href="menu.html">Food Menu</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="feedback-form-container">
+                <h2>Share Your Food Experience</h2>
+                <p>Your feedback helps us improve the mess quality!</p>
+                
+                <!-- Today's Menu Preview -->
+                <div id="todayMenu" class="today-menu">
+                    <h3>Today's Menu</h3>
+                    <div id="menuPreview">Loading today's menu...</div>
+                </div>
+                
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="studentName">Student Name *</label>
+                        <input type="text" id="studentName" name="studentName" required 
+                               placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hostelRoomNumber">Hostel/Room Number *</label>
+                        <input type="text" id="hostelRoomNumber" name="hostelRoomNumber" required 
+                               placeholder="e.g., Block A-101">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="menuItem">Which meal are you reviewing? *</label>
+                        <select id="menuItem" required>
+                            <option value="Breakfast">Breakfast</option>
+                            <option value="Lunch">Lunch</option>
+                            <option value="Dinner">Dinner</option>
+                            <option value="General">General Feedback</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Food Rating *</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="foodRating" value="5">
+                            <label for="star5" title="Excellent">★</label>
+                            <input type="radio" id="star4" name="foodRating" value="4">
+                            <label for="star4" title="Good">★</label>
+                            <input type="radio" id="star3" name="foodRating" value="3">
+                            <label for="star3" title="Average">★</label>
+                            <input type="radio" id="star2" name="foodRating" value="2">
+                            <label for="star2" title="Poor">★</label>
+                            <input type="radio" id="star1" name="foodRating" value="1">
+                            <label for="star1" title="Very Poor">★</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackText">Your Feedback *</label>
+                        <textarea id="feedbackText" name="feedbackText" rows="5" required 
+                                  placeholder="Share your thoughts about today's food..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Feedback</button>
+                </form>
+                
+                <div id="message" class="message"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/feedback.js"></script>
+</body>
+</html>

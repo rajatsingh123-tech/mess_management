@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Hostel Mess</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 Hostel Mess Feedback System</h1>
+            <nav>
+                <a href="feedback.html">Give Feedback</a>
+                <a href="admin.html" class="active">Admin Dashboard</a>
+                <a href="menu.html">Food Menu</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="dashboard-container">
+                <h2>Admin Dashboard</h2>
+                
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Total Feedbacks</h3>
+                        <p id="totalFeedbacks">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Average Rating</h3>
+                        <p id="averageRating">0.00</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Positive Feedback</h3>
+                        <p id="positiveCount">0</p>
+                    </div>
+                </div>
+
+                <div class="feedback-list">
+                    <h3>All Feedback Entries</h3>
+                    <div class="table-responsive">
+                        <table id="feedbackTable">
+                            <thead>
+                                眉
+                                    <th>Student Name</th>
+                                    <th>Room Number</th>
+                                    <th>Rating</th>
+                                    <th>Feedback</th>
+                                    <th>Sentiment</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="feedbackTableBody">
+                                <tr>
+                                    <td colspan="7" style="text-align: center;">Loading feedback...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
